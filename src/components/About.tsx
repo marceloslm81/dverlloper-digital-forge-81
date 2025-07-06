@@ -1,21 +1,35 @@
 
 import React from 'react';
 import { Code, Palette, Rocket, Users, CheckCircle, Zap, Globe, Smartphone, Mail, Database, FileCode2, Layers, Server, GitBranch } from 'lucide-react';
+import { 
+  HtmlIcon, 
+  CssIcon, 
+  JavaScriptIcon, 
+  ReactIcon, 
+  NextJsIcon, 
+  TypeScriptIcon, 
+  NodeJsIcon, 
+  MongoDbIcon, 
+  PostgreSqlIcon, 
+  TailwindIcon, 
+  GitIcon, 
+  GitHubIcon 
+} from './TechIcons';
 
 const About = () => {
   const technologies = [
-    { name: 'HTML', icon: Globe },
-    { name: 'CSS', icon: Palette },
-    { name: 'JavaScript', icon: FileCode2 },
-    { name: 'React', icon: Code },
-    { name: 'Next.js', icon: Layers },
-    { name: 'TypeScript', icon: FileCode2 },
-    { name: 'Node.js', icon: Server },
-    { name: 'MongoDB', icon: Database },
-    { name: 'PostgreSQL', icon: Database },
-    { name: 'Tailwind', icon: Palette },
-    { name: 'Git', icon: GitBranch },
-    { name: 'GitHub', icon: GitBranch }
+    { name: 'HTML', icon: HtmlIcon },
+    { name: 'CSS', icon: CssIcon },
+    { name: 'JavaScript', icon: JavaScriptIcon },
+    { name: 'React', icon: ReactIcon },
+    { name: 'Next.js', icon: NextJsIcon },
+    { name: 'TypeScript', icon: TypeScriptIcon },
+    { name: 'Node.js', icon: NodeJsIcon },
+    { name: 'MongoDB', icon: MongoDbIcon },
+    { name: 'PostgreSQL', icon: PostgreSqlIcon },
+    { name: 'Tailwind', icon: TailwindIcon },
+    { name: 'Git', icon: GitIcon },
+    { name: 'GitHub', icon: GitHubIcon }
   ];
 
   return (
@@ -143,8 +157,8 @@ const About = () => {
                 const IconComponent = tech.icon;
                 return (
                   <div key={index} className="bg-black/50 p-4 rounded-lg border border-gray-800 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
-                    <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">
-                      <IconComponent className="w-6 h-6 text-blue-500" />
+                    <div className="w-12 h-12 bg-gray-800/50 rounded-lg flex items-center justify-center mx-auto mb-3">
+                      <IconComponent className="w-8 h-8" />
                     </div>
                     <h4 className="text-white font-medium text-sm">{tech.name}</h4>
                   </div>
