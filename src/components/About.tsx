@@ -3,6 +3,21 @@ import React from 'react';
 import { Code, Palette, Rocket, Users, CheckCircle, Zap, Globe, Smartphone } from 'lucide-react';
 
 const About = () => {
+  const technologies = [
+    { name: 'HTML', icon: '🌐' },
+    { name: 'CSS', icon: '🎨' },
+    { name: 'JavaScript', icon: '⚡' },
+    { name: 'React', icon: '⚛️' },
+    { name: 'Next.js', icon: '▲' },
+    { name: 'TypeScript', icon: '📘' },
+    { name: 'Node.js', icon: '💚' },
+    { name: 'MongoDB', icon: '🍃' },
+    { name: 'PostgreSQL', icon: '🐘' },
+    { name: 'Tailwind', icon: '💨' },
+    { name: 'Git', icon: '📊' },
+    { name: 'GitHub', icon: '🐙' }
+  ];
+
   return (
     <>
       {/* Seção Sobre expandida */}
@@ -124,15 +139,12 @@ const About = () => {
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-              {[
-                'HTML', 'CSS', 'JavaScript', 'React', 'Next.js', 'TypeScript', 
-                'Node.js', 'MongoDB', 'PostgreSQL', 'Tailwind', 'Git', 'GitHub'
-              ].map((tech, index) => (
+              {technologies.map((tech, index) => (
                 <div key={index} className="bg-black/50 p-4 rounded-lg border border-gray-800 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
                   <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Code className="w-6 h-6 text-blue-500" />
+                    <span className="text-2xl">{tech.icon}</span>
                   </div>
-                  <h4 className="text-white font-medium text-sm">{tech}</h4>
+                  <h4 className="text-white font-medium text-sm">{tech.name}</h4>
                 </div>
               ))}
             </div>
