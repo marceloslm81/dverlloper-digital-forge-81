@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { useToast } from "@/components/ui/use-toast";
+import { Mail, MessageCircle, Clock } from 'lucide-react';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -78,7 +79,7 @@ ${formData.message}
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold">📧</span>
+                  <Mail className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h4 className="text-white font-semibold">Email</h4>
@@ -88,7 +89,7 @@ ${formData.message}
               
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold">📱</span>
+                  <MessageCircle className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h4 className="text-white font-semibold">WhatsApp</h4>
@@ -98,7 +99,7 @@ ${formData.message}
               
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold">⏰</span>
+                  <Clock className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h4 className="text-white font-semibold">Horário</h4>
@@ -114,7 +115,7 @@ ${formData.message}
                 rel="noopener noreferrer" 
                 className="inline-flex items-center space-x-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105"
               >
-                <span>💬</span>
+                <MessageCircle className="w-5 h-5" />
                 <span>Chamar no WhatsApp</span>
               </a>
             </div>

@@ -1,21 +1,21 @@
 
 import React from 'react';
-import { Code, Palette, Rocket, Users, CheckCircle, Zap, Globe, Smartphone } from 'lucide-react';
+import { Code, Palette, Rocket, Users, CheckCircle, Zap, Globe, Smartphone, Mail, Database, FileCode2, Layers, Server, GitBranch } from 'lucide-react';
 
 const About = () => {
   const technologies = [
-    { name: 'HTML', icon: '🌐' },
-    { name: 'CSS', icon: '🎨' },
-    { name: 'JavaScript', icon: '⚡' },
-    { name: 'React', icon: '⚛️' },
-    { name: 'Next.js', icon: '▲' },
-    { name: 'TypeScript', icon: '📘' },
-    { name: 'Node.js', icon: '💚' },
-    { name: 'MongoDB', icon: '🍃' },
-    { name: 'PostgreSQL', icon: '🐘' },
-    { name: 'Tailwind', icon: '💨' },
-    { name: 'Git', icon: '📊' },
-    { name: 'GitHub', icon: '🐙' }
+    { name: 'HTML', icon: Globe },
+    { name: 'CSS', icon: Palette },
+    { name: 'JavaScript', icon: FileCode2 },
+    { name: 'React', icon: Code },
+    { name: 'Next.js', icon: Layers },
+    { name: 'TypeScript', icon: FileCode2 },
+    { name: 'Node.js', icon: Server },
+    { name: 'MongoDB', icon: Database },
+    { name: 'PostgreSQL', icon: Database },
+    { name: 'Tailwind', icon: Palette },
+    { name: 'Git', icon: GitBranch },
+    { name: 'GitHub', icon: GitBranch }
   ];
 
   return (
@@ -139,14 +139,17 @@ const About = () => {
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-              {technologies.map((tech, index) => (
-                <div key={index} className="bg-black/50 p-4 rounded-lg border border-gray-800 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
-                  <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <span className="text-2xl">{tech.icon}</span>
+              {technologies.map((tech, index) => {
+                const IconComponent = tech.icon;
+                return (
+                  <div key={index} className="bg-black/50 p-4 rounded-lg border border-gray-800 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
+                    <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+                      <IconComponent className="w-6 h-6 text-blue-500" />
+                    </div>
+                    <h4 className="text-white font-medium text-sm">{tech.name}</h4>
                   </div>
-                  <h4 className="text-white font-medium text-sm">{tech.name}</h4>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>
